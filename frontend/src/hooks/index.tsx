@@ -10,7 +10,7 @@ export const useBlogs = ()=>{
         axios.get(`${BACKEND_URL}/v1/api/blogs`,
         {
             headers:{
-                Authorization:"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJhYWQ3OTYwMS0xYTc2LTRiMTgtYTQ4NS1mNmZmNDJmZWMzZjYifQ.Z1mOc2JK8bGrIZfOu8_kEv0FnFcECdOXxL60UtGPzC4"
+                Authorization:`Bearer ${localStorage.getItem('blog-token')}`
             }
         }).then((response)=>{
             console.log(response.data)
@@ -33,7 +33,7 @@ export const useBlog = (id:string)=>{
         axios.get(`${BACKEND_URL}/v1/api/blogs/${id}`,
         {
             headers:{
-                Authorization:"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJhYWQ3OTYwMS0xYTc2LTRiMTgtYTQ4NS1mNmZmNDJmZWMzZjYifQ.Z1mOc2JK8bGrIZfOu8_kEv0FnFcECdOXxL60UtGPzC4"
+                Authorization:`Bearer ${localStorage.getItem('blog-token')}`
             }
         }).then((response)=>{
             console.log(response.data)

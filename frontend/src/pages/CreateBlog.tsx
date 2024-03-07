@@ -32,7 +32,7 @@ const CreateBlog = () => {
         },
         {
             headers:{
-                Authorization:"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJhYWQ3OTYwMS0xYTc2LTRiMTgtYTQ4NS1mNmZmNDJmZWMzZjYifQ.Z1mOc2JK8bGrIZfOu8_kEv0FnFcECdOXxL60UtGPzC4"
+                Authorization:`Bearer ${localStorage.getItem('blog-token')}`
             }
         })
 
